@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chateste-696fe": {
+      "hosting": {
+        "app": [
+          "chateste-696fe"
+        ]
+      }
+    }
+  }
+}

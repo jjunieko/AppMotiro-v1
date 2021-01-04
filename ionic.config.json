@@ -1,0 +1,10 @@
+{
+  "name": "amigo",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

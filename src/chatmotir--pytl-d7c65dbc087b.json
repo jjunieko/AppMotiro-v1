@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "chatmotir--pytl",
+  "private_key_id": "d7c65dbc087b486270ee3cea4ea3b95439be74e3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCws7VbIKkWIVS5\nV5yJHKda+XyOjgHB1HVqwqYiUYRXVSx13nsTiSKsvlEQq14R184N28mrILfB6z4M\nFFUg7FYGS04SzUSs5NFiJIKHzuSMCBvUEFl2YOwReayjYc3Tnqgdm8MF0sVhlMdf\nSVgFmzskkTKik/Vm1fv6YIExD9qcIna8j0M/ccbz10lYUWHhUMqJv+VxUUaBhy1J\nEd2WjvrScXYOrTzgB99Tsq7bejR3OHKApSfTtEmugChGfMILb/H7bngtd5FlrCSK\na6xxA1SS2ziKjhgIFQAIMxhl+V1uAIKVHESLqyqMIHeZVUDdV4p1X6uBc/OCkiV9\nz7fohad5AgMBAAECggEAUKJpT4DreCRUp9FxpuYS/sJb0ye9aIi93i6eJooBdOLy\ny4TvsB4D20Vr88nnvwe2SX+zGyrugAkMAvIiWMhQh0XFBnJydN1kKT+U60l/5ODs\nZgzh7lHTWDQoklQW24uKlxxV1in1FY8Rngt3pfNM/WZe727KbReYCY0RV2SvM1EK\nq4PJZNZN8EFQWtgeyoYFlimGWH2ZQT3vYQ9HHHUezKbY8a0VQzTSVkN4LlYuUmo+\nV2sSe3QzlopIr6VQFq6sWFnMiZWWtPyD+dASvWdhO+r/C8r02xJ0vtjKbEOqb/eJ\nuFCQ2xAt40pDixbxSJLqEI8u4fYUQzcc/xQLRSYl4wKBgQDZFMaCB/e6OBOVItIO\n5P7qQ6WwyfQnYWnvlr6KnJ9PSgoTLvlJIfe1gCZV1xv30YuihLZqyo3wTnnK8OuH\nfwIJDzBkCIj6XpQnxDTCyRP38doeGVeVXY4cVKUOsQ8uyzQ4l+U7AR/JZAT+Et5i\nfeHPpnx9RXihV8gaWb5IRo3cNwKBgQDQYa2WB8dXCttYg0UCBzA4sEnSF/m4eruw\nqFfZ1UATifb8+JHNbxRFlfO5IoNsrTP5C4v5TnrkR9by4NWc1au7+4iiEORVIulu\nCIQCDV7AiNiSarlznyTJ/AlTUWvGVdf9LD7a+leZtWop/tTAbPCxb2cT+sE3zL7n\ntrE0qT6hzwKBgQCMYxopl5uGy6MmbJlqVn/g4pSx6zlBiocnEdbx7247qccwNs2y\nlQwMTe78zptgvhxOowMRtyLqCOZM71dyjhmz4CXMW5SyTh4ERahVXBLU44zKsFrq\n1tED013XTXxjJ7kC7ICrkwOKi2uLIIq/KWeykZmqrhXgSdO37tfXCAHQKwKBgBwG\nZwAcf7S3IxTeYrOJH/Uf0G3PB6jF6OQzX81OHtYB4hPXolRMsh9BsYuelqpRCQJf\niS24XlLBTqlPj6sOGZConZGeT/cbQOWpg4d7INkoDmhyrgpcxufbW62275W3Cdtk\nzfdJX+quOV74hMh0XlKetvA68y17/djP+zkn4eKFAoGAP8rosXAj7AJojXoaaGIg\nSTu3X2HhCofd69C0GBVZNT9m3DAHcXd0HyclDwoYPXiWjphnLhbC/oDkqKc/wf6z\nD8+wruY9VGdp1PU5LscrPBKPC3FA605BSY1SBlLgYcFxTU/dJqnJwyRoIffzX/o3\nLffUouJirtH4Yh7Qa2pci8g=\n-----END PRIVATE KEY-----\n",
+  "client_email": "coletivomotirosite-322@chatmotir--pytl.iam.gserviceaccount.com",
+  "client_id": "106591972242274943299",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/coletivomotirosite-322%40chatmotir--pytl.iam.gserviceaccount.com"
+}

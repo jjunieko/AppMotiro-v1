@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Diário de Gratidão</ion-title>
+    <ion-buttons>
+      <ion-menu-button menu="main-menu" slot="start"></ion-menu-button>
+    </ion-buttons>
+    <ion-button slot="end" (click)="abrirModalPerfil()"> <ion-icon name="add-circle-outline"></ion-icon> </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let PerfilPront of perfilUser; let id = index">
+      <!--   <ion-avatar slot="start">
+        <img src="http://lorempixel.com/150/100/food/" />
+      </ion-avatar> -->
+      <ion-label>
+        <h2>{{PerfilPront.nome}}</h2>
+        <ion-text color="medium">
+          <h3>{{PerfilPront.dataentrega}}</h3>
+        </ion-text>
+        <p>{{PerfilPront.tiposituacao}}</p>
+        <h5>{{PerfilPront.observacoes}}</h5>
+      </ion-label>
+
+      <ion-button slot="end" color="secondary" (click)="editarPerfilUser(id)">
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-button>
+      <ion-button slot="end" color="danger" (click)="actionSheetDelete(id)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
