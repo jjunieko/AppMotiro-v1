@@ -1,5 +1,11 @@
+ion-menu-button {
+ color: rgb(241, 192, 87);
+
+}
+
 ion-toolbar {
   --background: rgb(0, 0, 0) url("../../assets/img/FUNDO_BOLINHAS.png") no-repeat center center / cover !important;
+
 }
 
 ion-content {
@@ -35,13 +41,13 @@ p {
   align-items: center;
 }
 ion-button {
-  --background: rgb(241, 149, 87);
+  --background: rgb(241, 192, 87);
   padding: 0 15px 5px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   height: 50px;
 }
 ion-menu-button {

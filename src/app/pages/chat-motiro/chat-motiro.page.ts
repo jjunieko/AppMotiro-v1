@@ -13,21 +13,21 @@ import { AngularFireAuth } from "@angular/fire/auth";
   styleUrls: ["./chat-motiro.page.scss"],
 })
 export class ChatMotiroPage implements OnInit {
-  @ViewChild(IonContent) content: IonContent;
+ /*  @ViewChild(IonContent) content: IonContent;
   messages: Observable<any[]>;
   newMsg = "";
-  usuario: any;
+  usuario: any; */
   /* messages: Observable<Message[]>;
   formValue: string; */
 
-  constructor(private chatService: ChatService, private router: Router, private afAuth: AngularFireAuth) {}
+  constructor(/* private chatService: ChatService, private router: Router, private afAuth: AngularFireAuth */) {}
   ngOnInit() {
-    this.messages = this.chatService.getChatMessages();
+    /* this.messages = this.chatService.getChatMessages(); */
     /* this.chat.talk(); */
     /* this.messages = this.chat.conversation.asObservable().pipe(scan((acc, val) => acc.concat(val))); */
   }
 
-  ionViewDidLoad() {
+/*   ionViewDidLoad() {
     this.afAuth.authState.subscribe((usr) => {
       this.usuario = usr;
     });
@@ -44,7 +44,7 @@ export class ChatMotiroPage implements OnInit {
     this.chatService.signOut().then(() => {
       this.router.navigateByUrl("/", { replaceUrl: true });
     });
-  }
+  } */
   /* sendMessage() {
     this.chat.converse(this.formValue);
     this.formValue = "";

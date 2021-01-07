@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { AuthService } from "../../services/auth.service";
 import { TestServ } from "../../../app/pages/models/testeserv";
 
 @Component({
@@ -11,7 +10,7 @@ export class ChatDialogPage implements OnInit {
   id: number;
   chats: Array<TestServ> = [];
 
-  constructor(private authServ: AuthService) {}
+  constructor() {}
 
   ngOnInit() {}
 

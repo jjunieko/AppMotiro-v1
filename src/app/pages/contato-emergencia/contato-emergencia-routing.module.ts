@@ -1,14 +1,13 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { ContatoEmergenciaPage } from "./contato-emergencia.page";
-import { SMS } from "@ionic-native/sms/ngx";
+import { ContatoEmergenciaPage } from './contato-emergencia.page';
 
 const routes: Routes = [
   {
-    path: "",
-    component: ContatoEmergenciaPage,
-  },
+    path: '',
+    component: ContatoEmergenciaPage
+  }
 ];
 
 @NgModule({

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CvvPageRoutingModule } from './cvv-routing.module';
+import { PrecisoAjudaPageRoutingModule } from './preciso-ajuda-routing.module';
 
-import { CvvPage } from './cvv.page';
+import { PrecisoAjudaPage } from './preciso-ajuda.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CvvPageRoutingModule
+    PrecisoAjudaPageRoutingModule
   ],
-  declarations: [CvvPage]
+  declarations: [PrecisoAjudaPage]
 })
-export class CvvPageModule {}
+export class PrecisoAjudaPageModule {}

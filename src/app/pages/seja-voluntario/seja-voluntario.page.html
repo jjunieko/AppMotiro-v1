@@ -1,10 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Seja Voluntario</ion-title>
+    <ion-title  >Seja Voluntario</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
+    <ion-button slot="end" [routerLink]="['/home']" routerLinkActive="router-link-active">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+
+
+<ion-content [fullscreen]="false" class="ion-text-center" >
+  <img src="./../../../assets/img/WhatsApp Image 2019-10-30 at 10.59.22.jpeg"  class="image"  alt="" >
+  
+<div class="ion-text-justify" >
+
+		
+			<p>O voluntariado é uma oportunidade excepcional para a prática do bem e da solidariedade.</p>
+			<p>Ser voluntário é muito mais que oferecer uma parte de seu tempo, é muito mais que olhar para a necessidade do outro, muito mais que fazer parte de uma maravilhosa corrente, muito mais que colocar o seu entendimento e experiência em benefício do todo, vai além das expectativas do ser humano e o coloca em destaque, tanto para quem doa, tanto para quem recebe</p>
+			<p>O voluntário é um guerreiro silencioso que não busca fama, dinheiro ou oportunidade de riquezas, apenas dá o que tem de melhor. A visão do voluntário é ampla e bela, pois tem um alcance infinitamente maior sobre o que acontece ao seu redor e se integra a estas condições sempre com muita entrega e determinação.</p>
+			<p>Una-se ao nosso exército, nos ajude a salvar vidas! Nesse exato momento existe alguém precisando conversar com você. Seja um voluntário em nosso aplicativo.</p>
+			<p>Clique no ícone abaixo, faça o seu <strong>cadastro</strong> e receba todas as informações. Somente para maiores de 18 anos!</p>
+
+    </div>
+    
+
+    <ion-button (click)="onClick()">
+      <ion-icon name="document-text-outline" ></ion-icon>
+    </ion-button>
+
+
+
+</ion-content>

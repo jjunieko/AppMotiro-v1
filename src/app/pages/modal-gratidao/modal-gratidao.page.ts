@@ -20,7 +20,7 @@ export class ModalGratidaoPage implements OnInit {
     public modal: ModalController,
     public formBuilder: FormBuilder,
     public toastControl: ToastController,
-    public loading: LoadingController
+    public loading: LoadingController, public fecharModalOne: ModalController
   ) {
     this.form = this.formBuilder.group({
       name: [""],
@@ -45,7 +45,7 @@ export class ModalGratidaoPage implements OnInit {
     const editarPront = await this.servMotiro.getAll();
     console.log(editarPront, "saber minha edição");
     this.form.patchValue(editarPront);
-    await this.fecharCarregando();
+    await this.fecharModal();
   }
 
   async showMensagem(): Promise<void> {
@@ -64,15 +64,13 @@ export class ModalGratidaoPage implements OnInit {
     toast.present();
   }
 
-  public fecharModal(): void {
-    this.modal.dismiss();
-  }
+
 
   public async submitForm(): Promise<void> {
     await this.showCarregar();
     //console.log(this.form.value);
     this.servMotiro.salvarProntuarioPerfil(this.form.value, this.id);
-    await this.fecharCarregando();
+    await this.fecharModal();
     this.fecharModal();
     this.showMensagem();
   }
@@ -83,7 +81,10 @@ export class ModalGratidaoPage implements OnInit {
     });
     await this.carregar.present();
   }
-  async fecharCarregando(): Promise<void> {
-    await this.carregar.dismiss();
+ 
+
+
+  fecharModal(): void {
+    this.fecharModalOne.dismiss();
   }
 }

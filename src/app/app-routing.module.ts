@@ -16,10 +16,7 @@ const routes: Routes = [
     path: "home",
     loadChildren: () => import("./home/home.module").then((m) => m.HomePageModule),
   },
-  {
-    path: "cvv",
-    loadChildren: () => import("./pages/cvv/cvv.module").then((m) => m.CvvPageModule),
-  },
+
   {
     path: "chat-motiro",
     ...canActivate(redirectUnauthorizedToLogin),
@@ -29,14 +26,6 @@ const routes: Routes = [
     path: "diario-gratidao",
     loadChildren: () =>
       import("./pages/diario-gratidao/diario-gratidao.module").then((m) => m.DiarioGratidaoPageModule),
-  },
-  {
-    path: "sobre-suicidio",
-    loadChildren: () => import("./pages/sobre-suicidio/sobre-suicidio.module").then((m) => m.SobreSuicidioPageModule),
-  },
-  {
-    path: "como-ajudar",
-    loadChildren: () => import("./pages/como-ajudar/como-ajudar.module").then((m) => m.ComoAjudarPageModule),
   },
   {
     path: "seja-voluntario",
@@ -56,11 +45,7 @@ const routes: Routes = [
     path: "modal-gratidao",
     loadChildren: () => import("./pages/modal-gratidao/modal-gratidao.module").then((m) => m.ModalGratidaoPageModule),
   },
-  {
-    path: "contato-emergencia",
-    loadChildren: () =>
-      import("./pages/contato-emergencia/contato-emergencia.module").then((m) => m.ContatoEmergenciaPageModule),
-  },
+
   {
     path: "chat-dialog",
     loadChildren: () => import("./pages/chat-dialog/chat-dialog.module").then((m) => m.ChatDialogPageModule),
@@ -69,6 +54,18 @@ const routes: Routes = [
     path: "login",
     loadChildren: () => import("./pages/login/login.module").then((m) => m.LoginPageModule),
     ...canActivate(redirectLoggedInToChat),
+  },
+  {
+    path: 'preciso-ajuda',
+    loadChildren: () => import('./pages/preciso-ajuda/preciso-ajuda.module').then( m => m.PrecisoAjudaPageModule)
+  },
+  {
+    path: 'doacoes',
+    loadChildren: () => import('./pages/doacoes/doacoes.module').then( m => m.DoacoesPageModule)
+  },
+  {
+    path: 'contato-emergencia',
+    loadChildren: () => import('./pages/contato-emergencia/contato-emergencia.module').then( m => m.ContatoEmergenciaPageModule)
   },
 ];
 

@@ -1,6 +1,12 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>{{ isEdit == true ? 'Atualizar Diário' : 'Salvar Diário ' }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="fecharModal()">
+        <ion-icon name="close"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -29,7 +35,7 @@
     <ion-row>
       <ion-col>
         <ion-item color="#505050">
-          <ion-label>Como estou hoje</ion-label>
+          <ion-label>Como estou hoje ?</ion-label>
           <ion-select formControlName="tiposituacao" placeholder="Selecione o Tipo" okText="Ok" cancelText="Cancel">
             <ion-select-option value="Baixo">Baixo</ion-select-option>
             <ion-select-option value="Moderado">Moderado</ion-select-option>
@@ -84,7 +90,7 @@
             </ion-radio-group>
         </ion-col>
     </ion-row> -->
-    <ion-row>
+    <ion-row class="ion-text-center">
       <ion-col>
         <textarea class="ion-align-items-center" name="observacoes" cols="40" rows="15"></textarea>
       </ion-col>

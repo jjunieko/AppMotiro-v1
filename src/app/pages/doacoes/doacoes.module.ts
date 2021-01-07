@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SobreSuicidioPageRoutingModule } from './sobre-suicidio-routing.module';
+import { DoacoesPageRoutingModule } from './doacoes-routing.module';
 
-import { SobreSuicidioPage } from './sobre-suicidio.page';
+import { DoacoesPage } from './doacoes.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SobreSuicidioPageRoutingModule
+    DoacoesPageRoutingModule
   ],
-  declarations: [SobreSuicidioPage]
+  declarations: [DoacoesPage]
 })
-export class SobreSuicidioPageModule {}
+export class DoacoesPageModule {}
