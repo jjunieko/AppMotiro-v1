@@ -67,6 +67,10 @@ const routes: Routes = [
     path: 'contato-emergencia',
     loadChildren: () => import('./pages/contato-emergencia/contato-emergencia.module').then( m => m.ContatoEmergenciaPageModule)
   },
+  {
+    path: 'preload-chat',
+    loadChildren: () => import('./pages/preload-chat/preload-chat.module').then( m => m.PreloadChatPageModule)
+  },
 ];
 
 @NgModule({

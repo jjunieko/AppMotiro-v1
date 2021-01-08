@@ -1,0 +1,68 @@
+ion-menu-button {
+    color: rgb(241, 192, 87);
+    border-radius: 8px;
+   
+   }
+   
+   ion-toolbar {
+     --background: #fff  /* url("../../assets/img/FUNDO_BOLINHAS.png") no-repeat center center / cover !important; */
+   
+   }
+   
+   ion-content {
+     width: inherit;
+     height: inherit;
+     display: flex;
+     --background:#fff /* url("../../assets/img/FUNDO_BOLINHAS.png") no-repeat center center / cover !important; */
+   }
+   p {
+     margin-top: 10px;
+     color: #000000;
+     text-align: center;
+     justify-content: center;
+
+   }
+   
+   .containerOne img {
+     height: 180px;
+     display: center;
+     justify-content: center;
+     align-items: center;
+     padding: 0px 30px;
+     margin-top: 90px;
+   }
+   
+   .ion-text-center {
+     margin-top: 10px;
+     padding: 10px;
+   }
+   
+   #container3 img {
+     padding: 15px;
+     align-items: center;
+   }
+   ion-button {
+     --background: rgb(241, 192, 87);
+     padding: 0 15px 5px;
+     margin-bottom: 20px;
+     align-items: center;
+     justify-content: center;
+     font-weight: bold;
+     color: #000;
+     height: 50px;
+     margin-top: 30px;
+   }
+  /*  ion-menu-button {
+     --color: rgb(252, 252, 252);
+   }
+   .cvv,
+   .motiro {
+     height: 80px;
+   }
+   .respire,
+   .contatoEmergencial,
+   .paporeto {
+     margin: 10px;
+     height: 100px;
+   } */
+   
