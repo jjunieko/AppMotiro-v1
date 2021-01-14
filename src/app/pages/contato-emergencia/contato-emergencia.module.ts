@@ -15,6 +15,7 @@ import { ContatoEmergenciaPage } from './contato-emergencia.page';
     IonicModule,
     ContatoEmergenciaPageRoutingModule
   ],
-  declarations: [ContatoEmergenciaPage]
+  declarations: [ContatoEmergenciaPage, ], 
+  
 })
 export class ContatoEmergenciaPageModule {}

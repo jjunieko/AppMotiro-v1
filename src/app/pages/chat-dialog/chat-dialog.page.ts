@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { TestServ } from "../../../app/pages/models/testeserv";
+import { AngularFireDatabase } from "@angular/fire/database";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NavController, NavParams, ToastController } from "@ionic/angular";
 
 @Component({
   selector: "app-chat-dialog",
@@ -7,16 +9,14 @@ import { TestServ } from "../../../app/pages/models/testeserv";
   styleUrls: ["./chat-dialog.page.scss"],
 })
 export class ChatDialogPage implements OnInit {
-  id: number;
-  chats: Array<TestServ> = [];
+  
 
-  constructor() {}
+  constructor(private db: AngularFireDatabase) {
+  }
+
+  
 
   ngOnInit() {}
 
-  /*   buscarZenvia() {
-    this.authServ.getZenvia(this.id).subscribe((res) => {
-      this.chats = res.dados;
-    });
-  } */
+ 
 }
