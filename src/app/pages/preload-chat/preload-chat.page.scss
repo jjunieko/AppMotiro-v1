@@ -10,6 +10,7 @@ ion-menu-button {
    }
    
    ion-content {
+     top: 50px;
      width: inherit;
      height: inherit;
      display: flex;
@@ -24,11 +25,12 @@ ion-menu-button {
    }
    
    .containerOne img {
+     top: 20px;
      height: 180px;
      display: center;
      justify-content: center;
      align-items: center;
-     padding: 0px 30px;
+     padding: 0px 60px;
      margin-top: 90px;
    }
    

@@ -13,7 +13,51 @@
 
 
 <ion-content [fullscreen]="false" class="ion-text-center" >
-  <img src="./../../../assets/img/WhatsApp Image 2019-10-30 at 10.59.22.jpeg"  class="image"  alt="" >
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <div class="div-slider">
+    <ul class="slides-front">
+      <input type="radio" name="radio-btn" id="img-1" checked="">
+      <li class="slide-container">
+         <div class="slide">
+           <img src="../../../assets/imagens/_DSC1682.jpg">
+         </div>
+         <div class="nav">
+           <label for="img-3" class="prev">‹</label>
+           <label for="img-2" class="next">›</label>
+         </div>
+      </li>
+  
+      <input type="radio" name="radio-btn" id="img-2">
+      <li class="slide-container">
+          <div class="slide">
+            <img src="../../../assets/imagens/_DSC3950.jpg">
+          </div>
+      <div class="nav">
+        <label for="img-1" class="prev">‹</label>
+        <label for="img-3" class="next">›</label>
+      </div>
+      </li>
+  
+      <input type="radio" name="radio-btn" id="img-3">
+      <li class="slide-container">
+          <div class="slide">
+            <img src="../../../assets/imagens/_DSC6197.jpg">
+          </div>
+      <div class="nav">
+        <label for="img-2" class="prev">‹</label>
+        <label for="img-1" class="next">›</label>
+      </div>
+      </li>
+  
+      <li class="nav-dots">
+        <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+        <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+        <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+      </li>
+    </ul>
+  </div>
+
   
 <div class="ion-text-justify" >
 

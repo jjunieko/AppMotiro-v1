@@ -11,9 +11,9 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { IonicStorageModule } from "@ionic/storage";
 /* import { HttpModule } from "@angular/http"; */
- import { SMS } from "@ionic-native/sms/ngx";
+/*  import { SMS } from "@ionic-native/sms/ngx";
 import { Contacts, Contact, ContactField, ContactName } from "@ionic-native/contacts/ngx";
-import { CallNumber } from "@ionic-native/call-number/ngx"; 
+import { CallNumber } from "@ionic-native/call-number/ngx";  */
 /* import { FormsModule, ReactiveFormsModule } from "@angular/forms"; */
 
 import { AngularFireModule } from "@angular/fire";
@@ -49,12 +49,12 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
 
-    SMS,
+/*     SMS,
     Contacts,
     CallNumber,
     Contact,
     ContactField,
-    ContactName, 
+    ContactName,  */
   ],
   bootstrap: [AppComponent],
 })

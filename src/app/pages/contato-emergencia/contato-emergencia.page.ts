@@ -11,12 +11,12 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
   styleUrls: ['./contato-emergencia.page.scss'],
 })
 export class ContatoEmergenciaPage implements OnInit {
-myContacts: Contact[] = [];
+/* myContacts: Contact[] = []; */
 
 
-  constructor(private contacts: Contact, private callNumber: CallNumber, private sms: SMS, private toastController: ToastController) { }
+  constructor(/* private contacts: Contact, private callNumber: CallNumber, private sms: SMS, private toastController: ToastController */) { }
 
-  loadContacts() {
+  /* loadContacts() {
  let options ={
       filter: '',
       multiple: true,
@@ -51,7 +51,7 @@ createContact() {
   (error: any) => console.error("error ao salvar o contato. ", error)
   );
   
-}
+} */
   
 
   ngOnInit() {
