@@ -22,6 +22,8 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 /* import { AngularFireDatabaseModule } from 'angularfire2/database'; */
 import { environment } from "../environments/environment";
 
+import { NgCalendarModule  } from 'ionic2-calendar';
+
 import { Camera } from '@ionic-native/camera/ngx';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 
@@ -39,6 +41,7 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    NgCalendarModule
 /*     AngularFireDatabaseModule */
   ],
 

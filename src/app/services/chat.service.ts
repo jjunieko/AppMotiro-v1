@@ -6,8 +6,12 @@ import { switchMap, map } from "rxjs/operators";
 import { BehaviorSubject, Observable } from "rxjs";
 import { Storage } from "@ionic/storage";
 
+
 //import { ApiAiClient } from "api-ai-javascript";
 //import { BehaviorSubject } from "rxjs";
+
+
+
 
 export interface User {
   uid: string;
