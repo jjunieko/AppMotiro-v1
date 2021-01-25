@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>{{ isEdit == true ? 'Atualizar Diário' : 'Salvar Diário ' }}</ion-title>
+    <h3>{{ calName }}</h3>
     <ion-buttons slot="end">
       <ion-button (click)="fecharModal()">
         <ion-icon name="close"></ion-icon>
@@ -104,4 +105,7 @@
       </ion-col>
     </ion-row>
   </form>
+
+ 
+
 </ion-content>

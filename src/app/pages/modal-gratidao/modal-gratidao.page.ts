@@ -1,7 +1,15 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { LoadingController, ModalController, ToastController } from "@ionic/angular";
+import {
+  LoadingController,
+  ModalController,
+  NavController,
+  NavParams,
+  Platform,
+  ToastController,
+} from "@ionic/angular";
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { ServiceMotiroService } from "../../services/service-motiro.service";
+
 
 @Component({
   selector: "app-modal-gratidao",
@@ -11,6 +19,7 @@ import { ServiceMotiroService } from "../../services/service-motiro.service";
 export class ModalGratidaoPage implements OnInit {
   @Input() id: number;
 
+  
   public isEdit: boolean = false;
   public form: FormGroup;
   public carregar: any;
@@ -20,8 +29,15 @@ export class ModalGratidaoPage implements OnInit {
     public modal: ModalController,
     public formBuilder: FormBuilder,
     public toastControl: ToastController,
-    public loading: LoadingController, public fecharModalOne: ModalController
+    public loading: LoadingController,
+    public fecharModalOne: ModalController,
+    public navCtrl: NavController,
+    public navParams: NavParams,
   ) {
+
+
+
+
     this.form = this.formBuilder.group({
       name: [""],
       dataEntrada: [""],
@@ -64,8 +80,6 @@ export class ModalGratidaoPage implements OnInit {
     toast.present();
   }
 
-
-
   public async submitForm(): Promise<void> {
     await this.showCarregar();
     //console.log(this.form.value);
@@ -81,8 +95,6 @@ export class ModalGratidaoPage implements OnInit {
     });
     await this.carregar.present();
   }
- 
-
 
   fecharModal(): void {
     this.fecharModalOne.dismiss();

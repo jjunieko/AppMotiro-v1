@@ -23,6 +23,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from "../environments/environment";
 
 import { NgCalendarModule  } from 'ionic2-calendar';
+import { Calendar } from '@ionic-native/calendar/ngx';
 
 import { Camera } from '@ionic-native/camera/ngx';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
@@ -41,7 +42,8 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    NgCalendarModule
+    NgCalendarModule,   
+
 /*     AngularFireDatabaseModule */
   ],
 
@@ -50,8 +52,9 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
     CameraPreview,
     StatusBar,
     SplashScreen,
+    Calendar,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-
+ 
 /*     SMS,
     Contacts,
     CallNumber,
