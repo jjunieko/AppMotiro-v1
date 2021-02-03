@@ -1,32 +1,60 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{ calName }}</ion-title>
-   <!--  <ion-title  >Seja Voluntario</ion-title> -->
+<!--     <ion-title>{{ calName }}</ion-title> -->
+    <ion-title>Seja um Voluntário</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
-    <ion-button slot="end" [routerLink]="['/home']" routerLinkActive="router-link-active">
-      <ion-icon name="close"></ion-icon>
-    </ion-button>
+    <ion-icon name="close" slot="end" [routerLink]="['/home']" routerLinkActive="router-link-active"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 
 
 <ion-content [fullscreen]="false" class="ion-text-center" >
+  <ion-slides paginationClickable=true
+                  initialSlide=0
+                  loop=true
+                  autoplay=2000
+                  speed= 3000
+                  #mySlider
+                  color="light">
+ 
+        <ion-slide *ngFor="let item of voluntario">
+  
+          <img src="{{item.img}}" >
+         <!--  <ion-item class="itemPosicao" color="medium">
+            {{item.posicao}}
+          </ion-item>  -->
+         <!--  <ion-item color="primary">
+            {{item.camisa}} | {{item.nome}}
+          </ion-item> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <div class="div-slider">
+          
+      <div class="swiper-button-next" (click)="slideNext()"></div>
+      <div class="swiper-button-prev" (click)="slidePrev()"></div> 
+        </ion-slide>
+      </ion-slides>
+ 
+
+
+
+
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+ 
+
+  <!-- <div class="div-slider">
     <ul class="slides-front">
       <input type="radio" name="radio-btn" id="img-1" checked="">
       <li class="slide-container">
          <div class="slide">
            <img src="../../../assets/imagens/_DSC1682.jpg">
          </div>
-         <div class="nav">
+         
+          <div class="nav">
            <label for="img-3" class="prev">‹</label>
            <label for="img-2" class="next">›</label>
-         </div>
+         </div> 
       </li>
   
       <input type="radio" name="radio-btn" id="img-2">
@@ -58,7 +86,7 @@
       </li>
     </ul>
   </div>
-
+ -->
   
 <div class="ion-text-justify" >
 
@@ -69,16 +97,13 @@
 			<p>Una-se ao nosso exército, nos ajude a salvar vidas! Nesse exato momento existe alguém precisando conversar com você. Seja um voluntário em nosso aplicativo.</p>
 			<p>Clique no ícone abaixo, faça o seu <strong>cadastro</strong> e receba todas as informações. Somente para maiores de 18 anos!</p>
 
-      <h4><strong>Cadastre-se</strong> </h4>
+      <h3 ><strong class="ion-align-items-center">Cadastre-se</strong> </h3>
     </div>
     
-
-    <ion-button  href="https://docs.google.com/forms/d/e/1FAIpQLSf_hdUAKqcda8piC6jtzJx0HTK6zLD9XIYxAECDxKRBDaIDHQ/viewform">
-      <ion-icon name="document-text-outline" ></ion-icon>
-    </ion-button>
-
+    <iframe  src="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf_hdUAKqcda8piC6jtzJx0HTK6zLD9XIYxAECDxKRBDaIDHQ/formResponse" ></iframe>
+   
  <!-- calendario detalhes -->
- <ion-card *ngFor="let ev of events">
+<!--  <ion-card *ngFor="let ev of events">
   <ion-card-header>
     {{ ev.title }}
   </ion-card-header>
@@ -95,7 +120,7 @@
       </ion-item>
     </ion-list>
   </ion-card-content>
-</ion-card>
+</ion-card> -->
 
 
 </ion-content>

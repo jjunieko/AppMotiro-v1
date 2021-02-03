@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavController, NavParams, Platform } from '@ionic/angular';
 import { Calendar } from "@ionic-native/calendar/ngx";
 
@@ -10,18 +10,65 @@ import { Calendar } from "@ionic-native/calendar/ngx";
 })
 export class SejaVoluntarioPage implements OnInit {
 
+  @ViewChild('mySlider') mySlider: any;
+ 
+  voluntario =  [
+             {
+               "img": "../../../assets/imagens/_DSC1682.jpg",
+               "posicao": "1",
+               /* "nome": "teste",
+               "camisa": "1" */
+             },
+             {
+               "img": "../../../assets/imagens/_DSC3950.jpg",
+               "posicao": "2 ",
+               /* "nome": "teste",
+               "camisa": "4" */
+             },
+             {
+               "img": "../../../assets/imagens/_DSC6197.jpg",
+               "posicao": "3 ",
+             /*   "nome": "teste",
+               "camisa": "26" */
+             },
+             {
+              "img": "../../../assets/imagens/_DSC7799.jpg",
+              "posicao": "4 ",
+            /*   "nome": "teste",
+              "camisa": "26" */
+            },
+            {
+              "img": "../../../assets/imagens/_DSC8050.jpg",
+              "posicao": "5 ",
+            /*   "nome": "teste",
+              "camisa": "26" */
+            }
+             
+           ]
 
-  calName = "";
-  events = [];
+           slideNext(){
+            this.mySlider.slideNext();
+          }
+      
+          slidePrev(){
+            this.mySlider.slidePrev();
+          }
+
+
+
+
+
+/*   calName = "";
+  events = []; */
 
 
   constructor(  public navCtrl: NavController,
     public navParams: NavParams,
-    private calendar: Calendar,
-    private plt: Platform) {
+    /* private calendar: Calendar,
+    private plt: Platform */) {
 
 
-   this.calName = navParams.get('name');
+  /*  this.calName = navParams.get('name');
 
     if (this.plt.is('ios')) {
       this.calendar.findAllEventsInNamedCalendar(this.calName).then(data => {
@@ -35,10 +82,14 @@ export class SejaVoluntarioPage implements OnInit {
       this.calendar.listEventsInRange(start, end).then(data => {
         this.events = data;
       });
-    } 
+    }  */
    }
 
   ngOnInit() {
   }
+
+  /* função slide */
+
+
 
 }
