@@ -40,6 +40,14 @@ ion-menu-button {
      padding: 0px 60px;
      margin-top: 90px;
    } 
+
+
+   .my-custom-class {
+    --background: #222;
+    --spinner-color: #fff;
+  
+    color: #fff;
+  }
    
    .ion-text-center {
      margin-top: 10px;
