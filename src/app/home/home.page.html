@@ -1,6 +1,5 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title></ion-title>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
@@ -8,19 +7,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-text-center">
-  <div class="containerOne">
-    <img src="../../assets/img/LOGO-amigo2.png" alt="" />
+  <div class="containerOne" style="width:85%" >
+    <img src="../../assets/icon/LOGO_AMIGO.svg"  style="width:100%" alt="" />
   </div>
-  <p class="ion-text-center"><strong> Precisa conversar com alguém!</strong></p>
-
-<!--   <div class="ion-text-center">
-    <a
-      href="http://cvvweb.mysuite1.com.br/client/chatan.php?h=&inf=&lfa=http://cvvweb.mysuite1.com.br/client/chatan.php?h=&inf=&lfa="
-    >
-      <img class="cvv" src="../../assets/icon/CVV.svg" alt="cvv" teste teste />
-    </a>
-  </div> -->
-
+ 
   <div class="ion-text-center" >
     <a routerLink="../preload-chat">
       <img style="width: 150px; height: 150px;" class="motiro" src="../../assets/imagens/CONVERSE_COM_ALGUEM.svg" alt="motiro" />
@@ -40,17 +30,19 @@
     </a>
   </div>
 
-  <div class="ion-text-center" id="container3">
+  <div routerLink="../respire" class="ion-text-center" id="container3">
     <a>
-      <img style="width: 100px; height: 100px;" class="respire" src="../../assets/imagens/RESPIRE.svg" alt="" />
+      <img style="width: 90px; height: 90px;" class="respire" src="../../assets/imagens/RESPIRE.svg" alt="" />
     </a>
-    <a href="https://www.google.com/maps/d/u/0/viewer?mid=147YqFIKG6PUhFw606aazeZbcZCEzK2Oh&ll=-13.913780737076829%2C-61.54771807494362&z=5" >
-      <img style="width: 100px; height: 100px;" class="servicoSaude" src="../../assets/imagens/SERVI195135O_DE_SA195154DE_MENTAL.svg" alt="" />
+    <a  routerLink="../preciso-ajuda">
+      <img style="width: 90px; height: 90px;" class="servicoSaude" src="../../assets/imagens/SERVI195135O_DE_SA195154DE_MENTAL.svg" alt="" />
     </a>
 
     <a href="https://www.youtube.com/playlist?list=PLJwrW0MOGQUc7gvlNb6WITrHJKX_4jOLx">
-      <img style="width: 100px; height: 100px;" class="paporeto" src="../../assets/imagens/PAPO_RETO.svg" alt="" />
+      <img style="width: 90px; height: 90px;" class="paporeto" src="../../assets/imagens/PAPO_RETO.svg" alt="" />
     </a>
   </div>
-  <ion-button expand="block">Saiba Mais</ion-button>
+  <ion-button expand="block" href="https://coletivomotiro.org">Saiba Mais</ion-button>
+
+
 </ion-content>

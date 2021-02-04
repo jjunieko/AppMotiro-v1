@@ -26,77 +26,43 @@ export class ModalGratidaoPage implements OnInit {
 
   constructor(
     public servMotiro: ServiceMotiroService,
-    public modal: ModalController,
+    /* public modal: ModalController, */
     public formBuilder: FormBuilder,
     public toastControl: ToastController,
     public loading: LoadingController,
-    public fecharModalOne: ModalController,
+    public fecharModal: ModalController,
     public navCtrl: NavController,
     public navParams: NavParams,
+    public salvarService:ServiceMotiroService
   ) {
-
-
-
 
     this.form = this.formBuilder.group({
       name: [""],
-      dataEntrada: [""],
-      tiposituacao: [""],
-      avaliacao: [""],
-      observacoes: [""],
+      contato: [""],
     });
   }
 
   async ngOnInit(): Promise<void> {
     if (this.id || this.id === 0) {
-      await this.editarProntuario();
+      await this.editarDadosCovidModal();
       this.isEdit = true;
-
-      console.log(this.id, "editação do isEdit");
     }
-  }
-
-  public async editarProntuario(): Promise<void> {
-    await this.showCarregar();
-    const editarPront = await this.servMotiro.getAll();
-    console.log(editarPront, "saber minha edição");
-    this.form.patchValue(editarPront);
-    await this.fecharModal();
-  }
-
-  async showMensagem(): Promise<void> {
-    let message: string = "Perfil atualizado com Sucesso";
-    if (this.isEdit) {
-      message = "Perfil atualizado com sucesso";
-    } else {
-      alert("erro ao atualizar perfil");
-    }
-    const toast = await this.toastControl.create({
-      message: message,
-      duration: 2000,
-      color: "success",
-    });
-
-    toast.present();
+    console.log(this.id, "meu id editar butão");
   }
 
   public async submitForm(): Promise<void> {
-    await this.showCarregar();
-    //console.log(this.form.value);
-    this.servMotiro.salvarProntuarioPerfil(this.form.value, this.id);
-    await this.fecharModal();
-    this.fecharModal();
-    this.showMensagem();
+    console.log(this.form.value, "estou aqui modalhist");
+    this.salvarService.salvarDadosCv(this.form.value, this.id);
+    this.fecharCard();
   }
 
-  async showCarregar(): Promise<void> {
-    this.carregar = await this.loading.create({
-      message: "Aguarde...",
-    });
-    await this.carregar.present();
+  public async editarDadosCovidModal(): Promise<void> {
+    const edCovid = await this.salvarService.getCovidForm(this.id);
+    console.log(edCovid, "editar covid");
+    this.form.patchValue(edCovid);
   }
 
-  fecharModal(): void {
-    this.fecharModalOne.dismiss();
+  fecharCard(): void {
+    this.fecharModal.dismiss();
   }
 }

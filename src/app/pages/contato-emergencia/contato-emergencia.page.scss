@@ -1,3 +1,26 @@
 .custom-ion-content{
     --background:transparent;
 }
+
+ion-icon{
+    color: rgb(241, 192, 87);
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
+
+ion-menu-button{
+    color: rgb(241, 192, 87);
+}
+
+ion-toolbar {
+    --background: rgb(0, 0, 0) url("../../../assets/img/FUNDO_BOLINHAS.png") no-repeat center center / cover ;
+  
+  }
+  
+  ion-content {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    --background: rgb(0, 0, 0) url("../../../assets/img/FUNDO_BOLINHAS.png") no-repeat center center / cover ;
+  }

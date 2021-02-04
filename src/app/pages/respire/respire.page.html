@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+      <ion-icon name="close" slot="end" [routerLink]="['/home']" routerLinkActive="router-link-active"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+
+    <div class="ion-text-center" id="lottie">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_BTOE9j.json"  loop  autoplay></lottie-player>
+      
+    </div>
+
+    <p style="color: #fff;">Escute uma música para acalmar</p>
+<div class="musica">
+  <audio controls color="success"  >
+    <source src="../../../assets/musica/Controle sua Ansiedade em 5 minutos_ Música Relaxante, Respiração Profunda e Relaxamento.m4a" type="audio/mpeg">
+    <source src="../../../assets/musica/Controle sua Ansiedade em 5 minutos_ Música Relaxante, Respiração Profunda e Relaxamento.m4a" type="audio/ogg">
+  </audio>
+</div>
+
+</ion-content>

@@ -63,12 +63,12 @@ export class DiarioGratidaoPage implements OnInit {
     public servMotiro: ServiceMotiroService,
     public actionSheetController: ActionSheetController,
     private db: AngularFirestore,
-    private navController: NavController,
-    private alertCtrl: AlertController,
+   /*  private navController: NavController,
+    private alertCtrl: AlertController, */
     @Inject(LOCALE_ID) private locale: string,
    
   ) {
-    this.db
+/*     this.db
       .collection(`events`)
       .snapshotChanges()
       .subscribe((colSnap) => {
@@ -81,7 +81,7 @@ export class DiarioGratidaoPage implements OnInit {
           console.log(event);
           this.eventSource.push(event);
         });
-      });
+      }); */
   }
 
   ngOnInit() {}
@@ -93,7 +93,7 @@ export class DiarioGratidaoPage implements OnInit {
     await this.carregar.present();
   }
 
-  public async getPerfil() {
+  /* public async getPerfil() {
     await this.showCarregar();
     setTimeout(async () => {
       this.perfilUser = await this.servMotiro.getAll();
@@ -175,10 +175,10 @@ export class DiarioGratidaoPage implements OnInit {
       endTime: new Date().toISOString(),
       allDay: false,
     };
-  }
+  } */
 
   // Create the right event format and reload source
-  addEvent() {
+  /* addEvent() {
     let eventCopy = {
       title: this.event.title,
       startTime: new Date(this.event.startTime),
@@ -254,7 +254,7 @@ export class DiarioGratidaoPage implements OnInit {
     this.event.startTime = selected.toISOString();
     selected.setHours(selected.getHours() + 1);
     this.event.endTime = selected.toISOString();
-  }
+  } */
 
   /* addNewEvent() {
     let start = this.selectedDate;

@@ -1,5 +1,7 @@
 ion-menu-button {
  color: rgb(241, 192, 87);
+ width: 50px;
+ height: 50px;
 
 }
 
@@ -22,13 +24,11 @@ p {
 }
 
 .containerOne img {
-  height: 180px;
-  display: center;
+  height: 190px;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   padding: 0px 10px;
-  margin-left: 50px;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .ion-text-center {

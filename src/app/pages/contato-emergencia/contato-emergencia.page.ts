@@ -1,39 +1,95 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, Platform, ToastController } from '@ionic/angular';
-import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
+import { Component, OnInit } from "@angular/core";
+import {
+  ModalController,
+  NavController,
+  NavParams,
+  Platform,
+  ToastController,
+} from "@ionic/angular";
+/* import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
 import { SMS } from '@ionic-native/sms/ngx';
 import { CallNumber } from '@ionic-native/call-number/ngx';
-import { Calendar } from '@ionic-native/calendar/ngx';
-import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { Calendar } from '@ionic-native/calendar/ngx'; */
+import { Router } from "@angular/router";
+import { HttpClient } from "@angular/common/http";
+import { ServiceMotiroService } from "src/app/services/service-motiro.service";
+import { ModalGratidaoPage } from "../modal-gratidao/modal-gratidao.page";
+import { PerfilUser } from "../models/perfilUser";
+
 /* import { MbscEventcalendarOptions, Notifications, localePtBR } from '@mobiscroll/angular'; */
 
-
 @Component({
-  selector: 'app-contato-emergencia',
-  templateUrl: './contato-emergencia.page.html',
-  styleUrls: ['./contato-emergencia.page.scss'],
-  providers: [NavParams]
+  selector: "app-contato-emergencia",
+  templateUrl: "./contato-emergencia.page.html",
+  styleUrls: ["./contato-emergencia.page.scss"],
+  providers: [NavParams],
 })
 export class ContatoEmergenciaPage implements OnInit {
-  calendars = []; 
+  public salvarItens: Array<PerfilUser> = [];
+  /* calendars = []; 
+  myContacts: Contact[] = [];  */
 
-
- myContacts: Contact[] = []; 
-
-
-  constructor( /* private contacts: Contact, private callNumber: CallNumber, private sms: SMS */ private toastController: ToastController, 
-    public navCtrl: NavController , private calendar: Calendar, private plt: Platform, 
-    public navParams: NavParams, private router: Router, private http: HttpClient, ) {
-      
-       this.plt.ready().then(() => {
+  constructor(
+    public salvarService: ServiceMotiroService,
+    public modal: ModalController,
+    /* private contacts: Contact, private callNumber: CallNumber, private sms: SMS */ private toastController: ToastController,
+    public navCtrl: NavController,
+    /* private calendar: Calendar, */ private plt: Platform,
+    public navParams: NavParams,
+    private router: Router,
+    private http: HttpClient,
+  /*   public serviceMotiro: ServiceMotiroService, */
+    /* public modalGratidaoPage: ModalGratidaoPage */
+  ) {
+    /*   this.plt.ready().then(() => {
         this.calendar.listCalendars().then(data => {
           this.calendars = data;
         });
-      }) 
+      })  */
+  }
 
-    }
+  async ngOnInit(): Promise<void> {
+    this.getCovidForm();
+  }
 
+  async abrirModalCovid() {
+    const modal = await this.modal.create({
+      component: ModalGratidaoPage,
+    });
+    modal.onDidDismiss().then(async () => {
+      await this.getCovidForm();
+    });
+    return await modal.present();
+  }
+
+  async editarDadosCovidVindoDaModal(id: number): Promise<void> {
+    const modal = await this.modal.create({
+      component: ModalGratidaoPage,
+      componentProps: {
+        id,
+      },
+    });
+    modal.onDidDismiss().then(async () => {
+      await this.getCovidForm();
+    });
+    return await modal.present();
+  }
+
+  async delete(key) {
+    await this.salvarService.delete(key);
+    await this.getCovidForm();
+  }
+
+  public async getCovidForm(): Promise<void> {
+    setTimeout(async () => {
+      console.log(this.salvarItens, "aqui teste");
+      this.salvarItens = await this.salvarService.getListarTodos();
+      console.log(this.salvarItens, "vamos chegar aqui ");
+    }, 2000);
+  }
+}
+
+/* 
      addEvent(cal) {
       
       let date = new Date();
@@ -47,56 +103,21 @@ export class ContatoEmergenciaPage implements OnInit {
       });
 
 
-    }
+    } */
 
-   /*  openCal(cal) {
+/*  openCal(cal) {
 
       this.router.navigate(["seja-voluntario"], { queryParams: { name: cal.name}})
-    } */ 
-  /*    openCal(cal) {
+    } */
+/*    openCal(cal) {
       this.navCtrl.setDirection(['ContatoEmergenciaPage',{ name: cal.name })
-    }    */ 
+    }    */
 
-  /*   openCal(cal) {
+/*   openCal(cal) {
       this.navCtrl.push('seja-voluntario', { name: cal.name })
     }   */
 
-
-    ngOnInit() {
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* loadContacts() {
+/* loadContacts() {
  let options ={
       filter: '',
       multiple: true,
@@ -132,11 +153,3 @@ createContact() {
   );
   
 } */
-  
-
-
-
-
-
-
-

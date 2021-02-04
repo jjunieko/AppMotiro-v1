@@ -17,9 +17,9 @@ import { Contacts, Contact, ContactField, ContactName } from "@ionic-native/cont
 import { CallNumber } from "@ionic-native/call-number/ngx";  */
 /* import { FormsModule, ReactiveFormsModule } from "@angular/forms"; */
 
-import { AngularFireModule } from "@angular/fire";
+/* import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
-import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFirestoreModule } from "@angular/fire/firestore"; */
 /* import { AngularFireDatabaseModule } from 'angularfire2/database'; */
 import { environment } from "../environments/environment";
 
@@ -28,6 +28,8 @@ import { Calendar } from '@ionic-native/calendar/ngx';
 
 import { Camera } from '@ionic-native/camera/ngx';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,13 +39,14 @@ import { CameraPreview } from '@ionic-native/camera-preview/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    /* FormsModule,
-    ReactiveFormsModule, */
+    FormsModule,
+    ReactiveFormsModule,
     IonicStorageModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+   /*  AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule,
-    NgCalendarModule,   
+    AngularFirestoreModule, */
+    NgCalendarModule,
+       
 
 /*     AngularFireDatabaseModule */
   ],

@@ -71,6 +71,14 @@ const routes: Routes = [
     path: 'preload-chat',
     loadChildren: () => import('./pages/preload-chat/preload-chat.module').then( m => m.PreloadChatPageModule)
   },
+  {
+    path: 'modal-info-one',
+    loadChildren: () => import('./pages/modal-info-one/modal-info-one.module').then( m => m.ModalInfoOnePageModule)
+  },
+  {
+    path: 'respire',
+    loadChildren: () => import('./pages/respire/respire.module').then( m => m.RespirePageModule)
+  },
 ];
 
 @NgModule({

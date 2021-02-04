@@ -14,12 +14,6 @@ export class SejaVoluntarioPage implements OnInit {
  
   voluntario =  [
              {
-               "img": "../../../assets/imagens/_DSC1682.jpg",
-               "posicao": "1",
-               /* "nome": "teste",
-               "camisa": "1" */
-             },
-             {
                "img": "../../../assets/imagens/_DSC3950.jpg",
                "posicao": "2 ",
                /* "nome": "teste",

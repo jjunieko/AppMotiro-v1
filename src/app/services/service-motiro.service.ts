@@ -8,60 +8,80 @@ import { Storage } from "@ionic/storage";
 export class ServiceMotiroService {
   constructor(public storage: Storage) {}
 
-  public async getAll(): Promise<PerfilUser[]> {
-    let perfilUser = await this.storage.get("perfilUser");
-    perfilUser = JSON.parse(perfilUser);
-    return perfilUser;
+  // lista todos 
+
+  public async getListarTodos(): Promise<PerfilUser[]> {
+    //console.log("teste");
+    let salvarItens = await this.storage.get("salvarItens");
+    salvarItens = JSON.parse(salvarItens);
+    console.log(salvarItens, "listamos todos");
+    return salvarItens;
   }
 
-  public async salvarProntuarioPerfil(PerfilPront: PerfilUser, id: number): Promise<void> {
-    console.log(PerfilPront, id);
+  // remover todos
+  public async removeTodos() {
+    await this.storage.remove("salvarItens")
+  }
+
+
+     //salvar dados dentro da modal
+  public async salvarDadosCv(
+    salvarService: PerfilUser,
+    id: number
+  ): Promise<void> {
+    console.log(salvarService, id,  "salvar Item");
     if (id || id === 0) {
-      await this.update(PerfilPront, id);
+      await this.update(salvarService, id);
+      console.log(id, "meu id");
       return;
     }
-    await this.save(PerfilPront);
+    await this.save(salvarService);
   }
 
-  public async save(PerfilPront): Promise<void> {
-    let perfilUser = await this.getAll();
-    if (!perfilUser) {
-      perfilUser = [];
+    // salvar modificações da modal
+
+   public async save(salvarService): Promise<void> {
+    let salvarItens = await this.getListarTodos();
+    if (!salvarItens) {
+      salvarItens = [];
     }
-    perfilUser.push(PerfilPront);
-    await this.storage.set("perfilUser", JSON.stringify(perfilUser));
-  }
+    salvarItens.push(salvarService);
+    await this.storage.set("salvarItens", JSON.stringify(salvarItens));
+  } 
 
-  public async update(perfilUserForm: PerfilUser, id: number): Promise<void> {
+    // atualizar lista de itens
+  public async update(covidForm: PerfilUser, id: number): Promise<void> {
     //comidaForm={Ovos} | id={2}
-    let comidas = await this.getAll();
-    comidas = await comidas.map((perfilLocalStorage, key) => {
-      if (id == key) {
-        console.log(perfilUserForm, "editando o perfil ");
-        return perfilUserForm;
+    let salvarItem = await this.getListarTodos();
+    salvarItem =  salvarItem.map((salvarlocalStorage, key) => {
+      if (id === key) {
+        return covidForm;
       }
-      return perfilLocalStorage;
+      //console.log(salvarItem, "salvaritem");
+      return salvarlocalStorage;
     });
 
-    // ComidasAtualizadas = [1 - pizza, 2 - ovos, 3 - batata]
-    await this.storage.set("perfilUser", JSON.stringify(comidas));
+    await this.storage.set("salvarItens", JSON.stringify(salvarItem));
+  } 
+
+ // deletar um item
+  public async delete(index: number): Promise<void> {
+    let salvarItens = await this.getListarTodos();
+    salvarItens.splice(index, 1);
+    await this.storage.set("salvarItens", JSON.stringify(salvarItens));
   }
 
-  public async getUsersForm(key: number): Promise<PerfilUser> {
-    let perfilUser = await this.getAll();
-    const perfilUserProcurada = perfilUser.find((perfil, idC) => {
-      if (idC === key) {
-        return perfil;
+
+    // listar todos os dados do formulário
+
+  public async getCovidForm(index: number): Promise<PerfilUser> {
+    let salvarItens = await this.getListarTodos();
+    //return salvarItens;
+    const CovidProcurado = salvarItens.find((salvarItem, key) => {
+      if (index === key) {
+        return salvarItem;
       }
     });
-    return perfilUserProcurada;
-  }
-
-  public async removerItem(index: number): Promise<void> {
-    let perfilUser = await this.getAll();
-    console.log(perfilUser);
-    perfilUser.splice(index, 1);
-    await this.storage.set("perfilUser", JSON.stringify(perfilUser));
-    console.log(perfilUser);
+    return CovidProcurado;
   }
 }
