@@ -30,6 +30,8 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+/* import {LottieSplashScreen} from '@ionic-native/lottie-splash-screen/ngx'; */
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -46,6 +48,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     AngularFireAuthModule,
     AngularFirestoreModule, */
     NgCalendarModule,
+    /* LottieSplashScreen */
        
 
 /*     AngularFireDatabaseModule */
