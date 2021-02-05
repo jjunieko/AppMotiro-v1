@@ -21,9 +21,9 @@ import { CallNumber } from "@ionic-native/call-number/ngx";  */
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from "@angular/fire/firestore"; */
 /* import { AngularFireDatabaseModule } from 'angularfire2/database'; */
-import { environment } from "../environments/environment";
+/* import { environment } from "../environments/environment"; */
 
-import { NgCalendarModule  } from 'ionic2-calendar';
+/* import { NgCalendarModule  } from 'ionic2-calendar'; */
 import { Calendar } from '@ionic-native/calendar/ngx';
 
 import { Camera } from '@ionic-native/camera/ngx';
@@ -47,7 +47,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
    /*  AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule, */
-    NgCalendarModule,
+    /* NgCalendarModule, */
     /* LottieSplashScreen */
        
 
