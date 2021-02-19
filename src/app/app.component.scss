@@ -10,3 +10,24 @@ color: rgb(236, 177, 48);
     margin-top: 30px;
     padding: 10px;
 }
+
+#Group{
+    #Path{
+        opacity: 0;
+        animation: 3s ease-in splashAnimantion;
+        transform: rotate3d(1, 15, 10, 50deg);
+        animation-fill-mode: forwards;
+    }
+    #Star{
+        opacity: 0;
+        animation: 3s ease-in splashAnimation;
+        animation-fill-mode: forwards;
+    }
+    @keyframes splashAnimation {
+        100%{
+            opacity: 0;
+            transform: rotate3d(1, 1, 0, 0deg);
+        }
+        
+    }
+}

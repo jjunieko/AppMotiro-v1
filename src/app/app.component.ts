@@ -11,8 +11,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
- /*  routerHidden =true;
-  @ViewChild('splash', {static: false})splash: ElementRef; */
+  routerHidden =true;
+  @ViewChild('splash', {static: false})splash: ElementRef;
 
 
   constructor(
@@ -32,11 +32,11 @@ export class AppComponent {
       
 
 
-/*      setTimeout(() => {
+     setTimeout(() => {
        this.routerHidden = false;
        this.splash.nativeElement.style.display = 'none';
-     },3000)
- */
+     },5000)
+
   /*  setTimeout(() => {
       this.lottieSplashScreen.hide();
      }, 2500) */
