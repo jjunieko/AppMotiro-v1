@@ -51,7 +51,7 @@ export class ModalGratidaoPage implements OnInit {
   }
 
   public async submitForm(): Promise<void> {
-    console.log(this.form.value, "estou aqui modalhist");
+    console.log(this.form.value, "estou aqui modalList");
     this.salvarService.salvarDadosCv(this.form.value, this.id);
     this.fecharCard();
   }

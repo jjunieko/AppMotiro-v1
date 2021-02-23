@@ -22,7 +22,7 @@
             <h2> <strong> {{ salvarService.name }}</strong></h2>
             <ion-text color="dark">
               <a href="">
-                <h3>{{ salvarService.contato }}</h3> </a>
+                <h3 >{{ salvarService.contato }}</h3> </a>
             </ion-text>
         </ion-label>
 
@@ -36,7 +36,7 @@
 </ion-list>  
 
 
- <!--  <ion-button (click)="loadContacts()" expand="full" fill="clear" shape="round">
+ <!-- <ion-button (click)="loadContacts()" expand="full" fill="clear" shape="round">
     Carregar Contatos
   </ion-button>
   <ion-button
@@ -49,10 +49,10 @@
   </ion-button>
 
   <ion-list>
-    <ion-item-sliding *ngFor="let c of Mycontacts">
+    <ion-item-sliding *ngFor="let c of myContacts">
       <ion-item>
         <ion-label
-          >{{ c.name.giveName }} <b>{{ c.name.familyName }}</b>
+          >{{ c.name.givenName }} <b>{{ c.name.familyName }}</b>
           <p>{{c.phoneNumbers[0].value}}</p>
         </ion-label>
       </ion-item>

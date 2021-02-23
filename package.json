@@ -116,7 +116,8 @@
       "cordova-plugin-calendar": {},
       "cordova-plugin-local-notification": {},
       "cordova-plugin-lottie-splashscreen": {},
-      "onesignal-cordova-plugin": {}
+      "onesignal-cordova-plugin": {},
+      "cordova-sms-plugin": {}
     },
     "platforms": [
       "browser",

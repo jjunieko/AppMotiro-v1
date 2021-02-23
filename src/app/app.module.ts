@@ -12,9 +12,9 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { IonicStorageModule } from "@ionic/storage";
 /* import { HttpModule } from "@angular/http"; */
-/*  import { SMS } from "@ionic-native/sms/ngx";
+/* import { SMS } from "@ionic-native/sms/ngx";
 import { Contacts, Contact, ContactField, ContactName } from "@ionic-native/contacts/ngx";
-import { CallNumber } from "@ionic-native/call-number/ngx";  */
+import { CallNumber } from "@ionic-native/call-number/ngx";   */
 /* import { FormsModule, ReactiveFormsModule } from "@angular/forms"; */
 
 /* import { AngularFireModule } from "@angular/fire";
@@ -29,6 +29,9 @@ import { Calendar } from '@ionic-native/calendar/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { SMS } from "@ionic-native/sms/ngx";
+import { Contact, Contacts} from "@ionic-native/contacts/ngx";
+import { CallNumber } from "@ionic-native/call-number/ngx";  
 
 /* import {LottieSplashScreen} from '@ionic-native/lottie-splash-screen/ngx'; */
 
@@ -59,10 +62,13 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     CameraPreview,
     StatusBar,
     SplashScreen,
-    Calendar,
+    Calendar, 
+    SMS,
+    Contact,
+    Contacts,
+    CallNumber,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
- 
-/*     SMS,
+/* SMS,
     Contacts,
     CallNumber,
     Contact,

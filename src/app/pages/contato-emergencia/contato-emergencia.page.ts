@@ -6,10 +6,10 @@ import {
   Platform,
   ToastController,
 } from "@ionic/angular";
-/* import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx';
+/* import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts/ngx'; */
 import { SMS } from '@ionic-native/sms/ngx';
-import { CallNumber } from '@ionic-native/call-number/ngx';
-import { Calendar } from '@ionic-native/calendar/ngx'; */
+/* import { CallNumber } from '@ionic-native/call-number/ngx';  */
+/* import { Calendar } from '@ionic-native/calendar/ngx'; */
 import { Router } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 import { ServiceMotiroService } from "src/app/services/service-motiro.service";
@@ -26,13 +26,13 @@ import { PerfilUser } from "../models/perfilUser";
 })
 export class ContatoEmergenciaPage implements OnInit {
   public salvarItens: Array<PerfilUser> = [];
-  /* calendars = []; 
-  myContacts: Contact[] = [];  */
+ /*  calendars = [];  */
+ /*  myContacts: Contact[] = [];  */
 
   constructor(
     public salvarService: ServiceMotiroService,
     public modal: ModalController,
-    /* private contacts: Contact, private callNumber: CallNumber, private sms: SMS */ private toastController: ToastController,
+    /* private contacts: Contacts, private callNumber: CallNumber, */ private sms: SMS, private toastController: ToastController,
     public navCtrl: NavController,
     /* private calendar: Calendar, */ private plt: Platform,
     public navParams: NavParams,
@@ -87,7 +87,7 @@ export class ContatoEmergenciaPage implements OnInit {
       console.log(this.salvarItens, "vamos chegar aqui ");
     }, 2000);
   }
-}
+
 
 /* 
      addEvent(cal) {
@@ -116,14 +116,14 @@ export class ContatoEmergenciaPage implements OnInit {
 /*   openCal(cal) {
       this.navCtrl.push('seja-voluntario', { name: cal.name })
     }   */
-
-/* loadContacts() {
+  
+ /* loadContacts() {
  let options ={
       filter: '',
       multiple: true,
       hasPhoneNumber: true,
-
  };
+
  this.contacts.find(['*'], options).then((contacts: Contact[])=>{
    this.myContacts = contacts;
    console.log('Contacts: ', contacts)
@@ -151,5 +151,8 @@ createContact() {
   },
   (error: any) => console.error("error ao salvar o contato. ", error)
   );
-  
-} */
+
+}  */
+
+}
+

@@ -4,15 +4,18 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
-    <ion-icon name="close" slot="end" [routerLink]="['/home']" routerLinkActive="router-link-active"></ion-icon>
+    <ion-icon
+      name="close"
+      slot="end"
+      [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+    ></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-text-center">
-
-
-<div class="pix">
-<!-- 
+  <div class="pix">
+    <!-- 
   <div >
     <div class="flb">
          <div class="Aligner-item Aligner-item--top"></div>
@@ -22,35 +25,68 @@
     </div>
 </div> -->
 
-
-<!--   <img src="../../../assets/imagens/DOA195135195149ES.svg" alt="doação"> -->
-<!-- <lottie-animation-view [options]="lottieConfig" [width]="200" [height]="200">
+    <!--   <img src="../../../assets/imagens/DOA195135195149ES.svg" alt="doação"> -->
+    <!-- <lottie-animation-view [options]="lottieConfig" [width]="200" [height]="200">
  
 </lottie-animation-view> -->
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player
+      src="https://assets1.lottiefiles.com/packages/lf20_udTJtk.json"
+      mode="bounce"
+      background="transparent"
+      speed="1"
+      loop
+      style="width: 100vw; height: 300px"
+      autoplay
+    ></lottie-player>
+    <!-- <lottie-player src="assets/Logo Motirõ_2021/data.json"  mode="bounce" background="transparent"  speed="1" loop style="width: 100vw; height: 300px;"autoplay></lottie-player> -->
 
+    <h2>
+      <strong>Faça sua doação</strong> <br />
+      por meio do
+    </h2>
+    <h4>PIX</h4>
+    <h5><strong>chave: </strong> 37.031.155/0001-03</h5>
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_udTJtk.json"  mode="bounce" background="transparent"  speed="1" loop style="width: 100vw; height: 300px;"autoplay></lottie-player>
-<!-- <lottie-player src="assets/Logo Motirõ_2021/data.json"  mode="bounce" background="transparent"  speed="1" loop style="width: 100vw; height: 300px;"autoplay></lottie-player> -->
+    <h5><strong class="ion-align-items-center"> Banco Santander </strong></h5>
+    <ul>
+      <p class="ion-align-items-center">Agência: 3846</p>
 
+      <p class="ion-align-items-center">Conta Corrente: 13002753-0</p>
+    </ul>
 
+    <p class="ion-align-items-center">
+      ajude o nosso projeto ir mais longe, <br />
+      para alcançar e salvar vidas!
+    </p>
+  </div>
 
-  <h2><strong>Faça sua doação</strong>  <br>
-     por meio do </h2>
-  <h4>PIX</h4>
-  <h5><strong>chave: </strong> 37.031.155/0001-03</h5>
+  <ion-button (click)="loadContacts()" expand="full">
+    Carregar Contatos
+  </ion-button>
+  <ion-button (click)="createContact()" expand="full">
+    Criar Contato
+  </ion-button>
 
-  <h5><strong class="ion-align-items-center"> Banco Santander </strong></h5>
-  <ul>
-    <p class="ion-align-items-center">Agência: 3846</p>
-    
-    <p class="ion-align-items-center">Conta Corrente: 13002753-0</p> 
-  </ul>
+  <ion-list>
+    <ion-item-sliding *ngFor="let c of myContacts">
+      <ion-item>
+        <ion-label
+          >{{ c.name.givenName }} <b>{{ c.name.familyName }}</b>
+          <p>{{c.phoneNumbers[0].value}}</p>
+        </ion-label>
+      </ion-item>
 
-  <p class="ion-align-items-center">ajude o nosso projeto ir mais longe, <br> para alcançar e salvar vidas!</p>
-
-  
-  
-</div>
+      <ion-item-options side="end">
+        <ion-item-option color="primary" (click)="call(c)">
+          <ion-icon slot="icon-only" name="call"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="secondary" (click)="sendSMS(c)">
+          <ion-icon slot="icon-only" name="mail"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+      
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
