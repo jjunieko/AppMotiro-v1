@@ -2,7 +2,12 @@ import { Component, OnInit } from "@angular/core";
 import { CallNumber } from "@ionic-native/call-number/ngx";
 import { SMS } from "@ionic-native/sms/ngx";
 import { NavController, ToastController } from "@ionic/angular";
-import { Contact, Contacts, ContactName, ContactField } from "@ionic-native/contacts/ngx";
+import {
+  Contact,
+  Contacts,
+  ContactName,
+  ContactField,
+} from "@ionic-native/contacts/ngx";
 
 @Component({
   selector: "app-doacoes",
@@ -27,9 +32,7 @@ ionViewDidLoad() {
    setTimeout(() =>this.splash=false, 4000);
 } */
 
-
-
-/* transferir função de contato para contato de emergencia, quando der certo no simulador!!!!!! */
+  /* transferir função de contato para contato de emergencia, quando der certo no simulador!!!!!! */
 
   loadContacts() {
     let options = {
@@ -54,7 +57,7 @@ ionViewDidLoad() {
   async createContact() {
     let contact: Contact = this.contacts.create();
 
-    contact.name = new ContactName (null, "Albuns", "Ape");
+    contact.name = new ContactName(null, "Albuns", "Ape");
     contact.phoneNumbers = [new ContactField("mobile", "12345678")];
     contact.save().then(
       async () => {

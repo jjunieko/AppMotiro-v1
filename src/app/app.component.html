@@ -1,87 +1,69 @@
 <ion-app>
+    <!--  <svg [hidden]="!routerHidden" #splash width="350" height="250" xmlns="http://www.w3.org/2000/svg" style="background:#f6f7f9"><g id="Group" fill="none" fill-rule="evenodd"><path id="Path" fill="#F04141" style="mix-blend-mode:multiply" d="M61.905-34.23l96.194 54.51-66.982 54.512L22 34.887z"/><circle fill="#10DC60" style="mix-blend-mode:multiply" cx="155.5" cy="135.5" r="57.5"/><path fill="#3880FF" style="mix-blend-mode:multiply" d="M208.538 9.513l84.417 15.392L223.93 93.93z"/><path fill="#FFCE00" style="mix-blend-mode:multiply" d="M268.625 106.557l46.332-26.75 46.332 26.75v53.5l-46.332 26.75-46.332-26.75z"/><circle fill="#7044FF" style="mix-blend-mode:multiply" cx="299.5" cy="9.5" r="38.5"/><rect fill="#11D3EA" style="mix-blend-mode:multiply" transform="rotate(-60 148.47 37.886)" x="143.372" y="-7.056" width="10.196" height="89.884" rx="5.098"/><path d="M-25.389 74.253l84.86 8.107c5.498.525 9.53 5.407 9.004 10.905a10 10 0 0 1-.057.477l-12.36 85.671a10.002 10.002 0 0 1-11.634 8.42l-86.351-15.226c-5.44-.959-9.07-6.145-8.112-11.584l13.851-78.551a10 10 0 0 1 10.799-8.219z" fill="#7044FF" style="mix-blend-mode:multiply"/><circle fill="#0CD1E8" style="mix-blend-mode:multiply" cx="273.5" cy="106.5" r="20.5"/></g></svg> -->
 
- <!--  <svg [hidden]="!routerHidden" #splash width="350" height="250" xmlns="http://www.w3.org/2000/svg" style="background:#f6f7f9"><g id="Group" fill="none" fill-rule="evenodd"><path id="Path" fill="#F04141" style="mix-blend-mode:multiply" d="M61.905-34.23l96.194 54.51-66.982 54.512L22 34.887z"/><circle fill="#10DC60" style="mix-blend-mode:multiply" cx="155.5" cy="135.5" r="57.5"/><path fill="#3880FF" style="mix-blend-mode:multiply" d="M208.538 9.513l84.417 15.392L223.93 93.93z"/><path fill="#FFCE00" style="mix-blend-mode:multiply" d="M268.625 106.557l46.332-26.75 46.332 26.75v53.5l-46.332 26.75-46.332-26.75z"/><circle fill="#7044FF" style="mix-blend-mode:multiply" cx="299.5" cy="9.5" r="38.5"/><rect fill="#11D3EA" style="mix-blend-mode:multiply" transform="rotate(-60 148.47 37.886)" x="143.372" y="-7.056" width="10.196" height="89.884" rx="5.098"/><path d="M-25.389 74.253l84.86 8.107c5.498.525 9.53 5.407 9.004 10.905a10 10 0 0 1-.057.477l-12.36 85.671a10.002 10.002 0 0 1-11.634 8.42l-86.351-15.226c-5.44-.959-9.07-6.145-8.112-11.584l13.851-78.551a10 10 0 0 1 10.799-8.219z" fill="#7044FF" style="mix-blend-mode:multiply"/><circle fill="#0CD1E8" style="mix-blend-mode:multiply" cx="273.5" cy="106.5" r="20.5"/></g></svg> -->
+    <!-- <img src="../assets/App AMIGO-gif.gif" alt="" [hidden]="!routerHidden"> -->
+    <img src="../assets/App-AMIGO_v2.gif" style="height: 100%; width: 100%" alt="" [hidden]="!routerHidden" />
 
-  <!-- <img src="../assets/App AMIGO-gif.gif" alt="" [hidden]="!routerHidden"> -->
-  <img src="../assets/App-AMIGO_v2.gif" alt="" [hidden]="!routerHidden">
-
-
-  <ion-menu contentId="main" menuId="main-menu" side="start" type="overlay">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title><a href="/"> Menu </a></ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-menu-toggle>
-          <ion-item routerLink="/preciso-ajuda" (click)="presentLoading()">
-            <!-- <ion-icon slot="start" name="chatbubbles"></ion-icon> -->
-            <img
-              src="../assets/imagens/HELP.svg"
-              alt=""
-              style="width: 25px; margin: 0 10px; margin-bottom: 10px;"
-            />
-            <ion-label>Preciso de ajuda!</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-        <!--  <ion-menu-toggle>
+    <ion-menu contentId="main" menuId="main-menu" side="start" type="overlay">
+        <ion-header>
+            <ion-toolbar>
+                <ion-title><a href="/"> Menu </a></ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-list>
+                <ion-menu-toggle>
+                    <ion-item routerLink="/preciso-ajuda">
+                        <!-- <ion-icon slot="start" name="chatbubbles"></ion-icon> -->
+                        <img src="../assets/imagens/HELP.svg" alt="" style="width: 25px; margin: 0 10px; margin-bottom: 10px" />
+                        <ion-label>Preciso de ajuda!</ion-label>
+                    </ion-item>
+                </ion-menu-toggle>
+                <!--  <ion-menu-toggle>
           <ion-item routerLink="/chat-motiro">
             <ion-icon slot="start" name="paper-plane"></ion-icon>
             <ion-label>Chat Motirõ</ion-label>
           </ion-item>
         </ion-menu-toggle> -->
-        <!--  <ion-menu-toggle>
+                <!--  <ion-menu-toggle>
           <ion-item routerLink="/diario-gratidao">
             <ion-icon slot="start" name="documents-outline"></ion-icon>
             <ion-label>Diário de Gratidão</ion-label>
           </ion-item></ion-menu-toggle
         > -->
-        <!--  <ion-menu-toggle
+                <!--  <ion-menu-toggle
           ><ion-item routerLink="/sobre-suicidio">
             <ion-icon slot="start" name="clipboard"></ion-icon>
             <ion-label>Sobre Suicidio</ion-label>
           </ion-item></ion-menu-toggle
         > -->
-        <!--  <ion-menu-toggle
+                <!--  <ion-menu-toggle
           ><ion-item routerLink="/como-ajudar">
             <ion-icon slot="start" name="information-circle"></ion-icon>
             <ion-label>Como Ajudar</ion-label>
           </ion-item></ion-menu-toggle
         > -->
-        <ion-menu-toggle
-          ><ion-item routerLink="/seja-voluntario">
-            <img
-              src="../assets//imagens/SEJA_UM_VOLUNT195129RIO.svg"
-              alt=""
-              style="width: 25px; margin: 0 10px; margin-bottom: 10px;"
-            />
-            <ion-label>Seja Voluntário</ion-label>
-          </ion-item></ion-menu-toggle
-        >
-   
-        <ion-menu-toggle
-          ><ion-item routerLink="/doacoes">
-            <img
-              src="../assets/imagens/DOA195135195149ES.svg"
-              alt=""
-              style="width: 25px; margin: 0 10px; margin-bottom: 10px;"
-            />
-            <ion-label>Doações</ion-label>
-          </ion-item></ion-menu-toggle
-        >
+                <ion-menu-toggle>
+                    <ion-item routerLink="/seja-voluntario">
+                        <img src="../assets//imagens/SEJA_UM_VOLUNT195129RIO.svg" alt="" style="width: 25px; margin: 0 10px; margin-bottom: 10px" />
+                        <ion-label>Seja Voluntário</ion-label>
+                    </ion-item>
+                </ion-menu-toggle>
 
-        <ion-menu-toggle
-        ><ion-item routerLink="/sobre-aplicativo">
-          <img
-            src="../assets/imagens/SOBRE_O_APLICATIVO.svg"
-            alt=""
-            style="width: 25px; margin: 0 10px; margin-bottom: 10px;"
-          />
-          <ion-label>Sobre Aplicativo</ion-label>
-        </ion-item></ion-menu-toggle
-      >
-    <!--     <ion-menu-toggle
+                <ion-menu-toggle>
+                    <ion-item routerLink="/doacoes">
+                        <img src="../assets/imagens/DOA195135195149ES.svg" alt="" style="width: 25px; margin: 0 10px; margin-bottom: 10px" />
+                        <ion-label>Doações</ion-label>
+                    </ion-item>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle>
+                    <ion-item routerLink="/sobre-aplicativo">
+                        <img src="../assets/imagens/SOBRE_O_APLICATIVO.svg" alt="" style="width: 25px; margin: 0 10px; margin-bottom: 10px" />
+                        <ion-label>Sobre Aplicativo</ion-label>
+                    </ion-item>
+                </ion-menu-toggle>
+                <!--     <ion-menu-toggle
           ><ion-item routerLink="/configuracoes">
             <img
               src="../assets/icon/settings.svg"
@@ -92,21 +74,19 @@
           </ion-item></ion-menu-toggle
         > -->
 
-        <!--   <ion-menu-toggle
+                <!--   <ion-menu-toggle
         ><ion-item routerLink="/contato-emergencia">
           <img src="../assets//imagens/SEJA_UM_VOLUNT195129RIO.svg" alt="" style="width: 25px; margin: 0 10px" />
           <ion-label>Contato emergencia</ion-label>
         </ion-item></ion-menu-toggle -->
-        
-      </ion-list>
+            </ion-list>
 
-      <div class="ion-align-items-center" id="redeSocial">
-        <a href="https://www.facebook.com/motirocoletivo" ><img src="https://i.imgur.com/DQPMwof.png" /></a>
-        <a href="https://www.instagram.com/coletivomotiro/" ><img src="https://i.imgur.com/BI168Lq.png" /></a>
-        <a href="https://www.youtube.com/channel/UCsauv8MgN7nVNSuyY0iCYEA" ><img src="https://i.imgur.com/aOljfuv.png" /></a>
-
-      </div>
-    </ion-content>
-  </ion-menu>
-  <ion-router-outlet [hidden]="routerHidden" id="main"></ion-router-outlet>
+            <div class="ion-align-items-center" id="redeSocial">
+                <a href="https://www.facebook.com/motirocoletivo"><img src="https://i.imgur.com/DQPMwof.png" /></a>
+                <a href="https://www.instagram.com/coletivomotiro/"><img src="https://i.imgur.com/BI168Lq.png" /></a>
+                <a href="https://www.youtube.com/channel/UCsauv8MgN7nVNSuyY0iCYEA"><img src="https://i.imgur.com/aOljfuv.png" /></a>
+            </div>
+        </ion-content>
+    </ion-menu>
+    <ion-router-outlet [hidden]="routerHidden" id="main"></ion-router-outlet>
 </ion-app>

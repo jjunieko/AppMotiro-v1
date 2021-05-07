@@ -1,0 +1,8 @@
+erro de keytool: java.lang.NumberFormatException: For input string: "[*tamanho"
+java.lang.NumberFormatException: For input string: "[*tamanho"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at sun.security.tools.keytool.Main.parseArgs(Main.java:508)
+	at sun.security.tools.keytool.Main.run(Main.java:373)
+	at sun.security.tools.keytool.Main.main(Main.java:368)

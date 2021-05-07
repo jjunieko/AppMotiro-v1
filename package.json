@@ -33,6 +33,7 @@
     "@ionic-native/local-notifications": "^5.31.1",
     "@ionic-native/lottie-splash-screen": "^5.31.1",
     "@ionic-native/onesignal": "^5.31.1",
+    "@ionic-native/push": "^5.32.1",
     "@ionic-native/sms": "^5.30.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
@@ -48,6 +49,7 @@
     "firebase": "^8.2.0",
     "ionic2-calendar": "^0.6.6",
     "ng-lottie": "^0.3.2",
+    "platform": "1.3.6",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -55,20 +57,21 @@
   "devDependencies": {
     "@angular-devkit/architect": ">= 0.900 < 0.1200",
     "@angular-devkit/build-angular": "^0.1100.7",
-    "@angular/cli": "~10.0.5",
+    "@angular/cli": "^11.2.9",
     "@angular/compiler": "~10.0.0",
     "@angular/compiler-cli": "~10.0.0",
     "@angular/language-service": "~10.0.0",
     "@capacitor/cli": "2.4.4",
-    "@ionic/angular-toolkit": "^2.3.0",
+    "@ionic/angular-toolkit": "^3.1.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "api-ai-javascript": "^2.0.0-beta.21",
     "codelyzer": "^6.0.0",
-    "cordova-android": "^9.0.0",
     "cordova-browser": "^6.0.0",
     "cordova-ios": "^6.2.0",
+    "cordova-plugin-androidx": "^3.0.0",
+    "cordova-plugin-androidx-adapter": "^1.1.3",
     "cordova-plugin-badge": "^0.8.8",
     "cordova-plugin-calendar": "^5.1.5",
     "cordova-plugin-camera": "^5.0.1",
@@ -82,7 +85,8 @@
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
-    "firebase-tools": "^8.0.0",
+    "cordova-support-google-services": "^1.3.2",
+    "firebase-tools": "^9.10.0",
     "fuzzy": "^0.1.3",
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
@@ -95,6 +99,8 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "onesignal-cordova-plugin": "^2.11.3",
     "open": "^7.0.3",
+    "phonegap-plugin-multidex": "^1.0.0",
+    "phonegap-plugin-push": "^2.3.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
@@ -117,12 +123,18 @@
       "cordova-plugin-local-notification": {},
       "cordova-plugin-lottie-splashscreen": {},
       "onesignal-cordova-plugin": {},
-      "cordova-sms-plugin": {}
+      "cordova-sms-plugin": {},
+      "cordova-plugin-androidx": {},
+      "cordova-plugin-androidx-adapter": {},
+      "phonegap-plugin-push": {
+        "ANDROID_SUPPORT_V13_VERSION": "27.+",
+        "FCM_VERSION": "17.0.+"
+      }
     },
     "platforms": [
       "browser",
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

@@ -1,50 +1,68 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from "@angular/core";
 /* import {LottieSplashScreen} from '@ionic-native/lottie-splash-screen/ngx'; */
-import { AlertController, Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx'; 
+import { AlertController, Platform } from "@ionic/angular";
+import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { StatusBar } from "@ionic-native/status-bar/ngx";
+
+import { Push, PushOptions, PushObject } from "@ionic-native/push/ngx";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  selector: "app-root",
+  templateUrl: "app.component.html",
+  styleUrls: ["app.component.scss"],
 })
 export class AppComponent {
-  routerHidden =true;
-  @ViewChild('splash', {static: false})splash: ElementRef;
-
+  routerHidden = true;
+  @ViewChild("splash", { static: false }) splash: ElementRef;
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    /* private lottieSplashScreen: LottieSplashScreen */
+    private push: Push /* private lottieSplashScreen: LottieSplashScreen */
   ) {
     this.initializeApp();
-    
   }
 
- initializeApp() {
+  initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      
 
+      this.initializeFirebase();
 
-     setTimeout(() => {
-       this.routerHidden = false;
-       this.splash.nativeElement.style.display = 'none';
-     },5000)
+      setTimeout(() => {
+        this.routerHidden = false;
+        this.splash.nativeElement.style.display = "none";
+      }, 5000);
 
-  /*  setTimeout(() => {
+      /*  setTimeout(() => {
       this.lottieSplashScreen.hide();
      }, 2500) */
     });
-  } 
+  }
 
+  /* push ionic  */
 
- /*  setupPush() {
+  private initializeFirebase() {
+    const options: PushOptions = {
+      android: {
+        senderID: "seu codigo cloud messaging",
+      },
+    };
+    const PushObject: PushObject = this.push.init(options);
+
+    PushObject.on("registration").subscribe((res) =>
+      console.log(`$(res.registrationId)`)
+    );
+
+    PushObject.on("notification").subscribe((res) =>
+      console.log(`já chegou o disco voador: ${res.message}`)
+    );
+  }
+
+  /*  setupPush() {
     // I recommend to put these into your environment.ts
     this.oneSignal.startInit('YOUR ONESIGNAL APP ID', 'YOUR ANDROID ID');
  
@@ -84,5 +102,4 @@ export class AppComponent {
     })
     alert.present();
   } */
-
 }
