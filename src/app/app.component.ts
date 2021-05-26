@@ -4,6 +4,7 @@ import { AlertController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx'; 
 
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Push, PushOptions, PushObject } from "@ionic-native/push/ngx";
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
+    private push: Push
     /* private lottieSplashScreen: LottieSplashScreen */
   ) {
     this.initializeApp();
@@ -29,20 +31,41 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.initializeFirebase();
       
 
 
      setTimeout(() => {
        this.routerHidden = false;
        this.splash.nativeElement.style.display = 'none';
-     },5000)
+     },3000)
 
   /*  setTimeout(() => {
       this.lottieSplashScreen.hide();
      }, 2500) */
     });
+  
   } 
 
+   /* push ionic  */
+  private initializeFirebase() {
+
+    const options: PushOptions = {
+      ios:{},
+      android: {
+        senderID: "729894396040",
+      },
+    };
+    const PushObject: PushObject = this.push.init(options);
+
+    PushObject.on("registration").subscribe((res) =>
+      console.log(`$(res.registrationId)`)
+    );
+
+    PushObject.on("notification").subscribe((res) =>
+      console.log(`já chegou o disco voador: ${res.message}`)
+    );
+  }
 
  /*  setupPush() {
     // I recommend to put these into your environment.ts

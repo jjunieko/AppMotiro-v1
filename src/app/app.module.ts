@@ -32,8 +32,12 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SMS } from "@ionic-native/sms/ngx";
 import { Contact, Contacts} from "@ionic-native/contacts/ngx";
 import { CallNumber } from "@ionic-native/call-number/ngx";  
-
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 /* import {LottieSplashScreen} from '@ionic-native/lottie-splash-screen/ngx'; */
+import { Push } from '@ionic-native/push/ngx';
+ 
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 
 @NgModule({
@@ -47,6 +51,7 @@ import { CallNumber } from "@ionic-native/call-number/ngx";
     FormsModule,
     ReactiveFormsModule,
     IonicStorageModule.forRoot(),
+    NgxMaskModule.forRoot(),
    /*  AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule, */
@@ -68,6 +73,7 @@ import { CallNumber } from "@ionic-native/call-number/ngx";
     Contacts,
     CallNumber,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Push
 /* SMS,
     Contacts,
     CallNumber,

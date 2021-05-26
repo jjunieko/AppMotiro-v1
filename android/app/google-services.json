@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "729894396040",
+    "project_id": "amigo-6dd5f",
+    "storage_bucket": "amigo-6dd5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729894396040:android:db92bb91ef9cba00d4ff3d",
+        "android_client_info": {
+          "package_name": "io.ionic.amigo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729894396040-5cmvejh2u1m1ikp1bsk0kfc5rjedcgc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPiSKkSc9AKDkn6QkittZ3gZ2XiElqMng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729894396040-5cmvejh2u1m1ikp1bsk0kfc5rjedcgc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

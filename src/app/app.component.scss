@@ -5,10 +5,17 @@ color: rgb(236, 177, 48);
 
 }
 
+
+
 #redeSocial{
-    margin: 0 30px;
-    margin-top: 30px;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    margin-top: 30px; 
+    padding: 15px;
 }
 
 #Group{

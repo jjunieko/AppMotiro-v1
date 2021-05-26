@@ -40,8 +40,10 @@ export class SejaVoluntarioPage implements OnInit {
              
            ]
 
+           
            slideNext(){
             this.mySlider.slideNext();
+           /*  this.mySlider = setTimeout(alert, 3000) */
           }
       
           slidePrev(){
