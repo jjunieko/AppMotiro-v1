@@ -17,11 +17,11 @@ const routes: Routes = [
     loadChildren: () => import("./home/home.module").then((m) => m.HomePageModule),
   },
 
-  {
+/*   {
     path: "chat-motiro",
     ...canActivate(redirectUnauthorizedToLogin),
     loadChildren: () => import("./pages/chat-motiro/chat-motiro.module").then((m) => m.ChatMotiroPageModule),
-  },
+  }, */
   {
     path: "diario-gratidao",
     loadChildren: () =>
@@ -37,24 +37,24 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/sobre-aplicativo/sobre-aplicativo.module").then((m) => m.SobreAplicativoPageModule),
   },
-  {
+ /*  {
     path: "configuracoes",
     loadChildren: () => import("./pages/configuracoes/configuracoes.module").then((m) => m.ConfiguracoesPageModule),
-  },
+  }, */
   {
     path: "modal-gratidao",
     loadChildren: () => import("./pages/modal-gratidao/modal-gratidao.module").then((m) => m.ModalGratidaoPageModule),
   },
 
-  {
+/*   {
     path: "chat-dialog",
     loadChildren: () => import("./pages/chat-dialog/chat-dialog.module").then((m) => m.ChatDialogPageModule),
-  },
-  {
+  }, */
+/*   {
     path: "login",
     loadChildren: () => import("./pages/login/login.module").then((m) => m.LoginPageModule),
     ...canActivate(redirectLoggedInToChat),
-  },
+  }, */
   {
     path: 'preciso-ajuda',
     loadChildren: () => import('./pages/preciso-ajuda/preciso-ajuda.module').then( m => m.PrecisoAjudaPageModule)
@@ -71,10 +71,10 @@ const routes: Routes = [
     path: 'preload-chat',
     loadChildren: () => import('./pages/preload-chat/preload-chat.module').then( m => m.PreloadChatPageModule)
   },
-  {
+  /* {
     path: 'modal-info-one',
     loadChildren: () => import('./pages/modal-info-one/modal-info-one.module').then( m => m.ModalInfoOnePageModule)
-  },
+  }, */
   {
     path: 'respire',
     loadChildren: () => import('./pages/respire/respire.module').then( m => m.RespirePageModule)
