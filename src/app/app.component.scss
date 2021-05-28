@@ -1,8 +1,23 @@
 ion-title a{
     font-family: Arial, Helvetica, sans-serif;
-font-size: 20px;
-color: rgb(236, 177, 48);
+    font-size: 20px;
+    color: rgb(236, 177, 48);
 
+}
+
+/* ion-icon{
+    color: rgb(241, 192, 87);
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+} */
+
+ion-label{
+    font-weight: 700;
+}
+
+ion-menu-button{
+    color: rgb(241, 192, 87);
 }
 
 
