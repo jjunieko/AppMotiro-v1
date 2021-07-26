@@ -44,6 +44,7 @@
     "angularfire": "^2.3.0",
     "angularfire2": "^5.4.2",
     "call-number": "^1.0.1",
+    "cordova-android": "9.1.0",
     "cordova-plugin-contacts": "^3.0.1",
     "cordova-sms-plugin": "^1.0.0",
     "firebase": "^8.2.0",
@@ -64,7 +65,7 @@
     "@angular/compiler-cli": "~10.0.0",
     "@angular/language-service": "~10.0.0",
     "@capacitor/cli": "2.4.4",
-    "@ionic/angular-toolkit": "^2.3.0",
+    "@ionic/angular-toolkit": "^4.0.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -124,7 +125,8 @@
     },
     "platforms": [
       "browser",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
